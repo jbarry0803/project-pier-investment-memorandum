@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(256%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(286%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3EP%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#14557b">
+<meta name="description" content="Project Pier / Investment Memorandum | deployed with HTMLaunch">
+<link rel="canonical" href="https://jbarry0803.github.io/project-pier-investment-memorandum/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Project Pier / Investment Memorandum">
+<meta property="og:title" content="Project Pier / Investment Memorandum">
+<meta property="og:description" content="Project Pier / Investment Memorandum | deployed with HTMLaunch">
+<meta property="og:url" content="https://jbarry0803.github.io/project-pier-investment-memorandum/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjbarry0803.github.io%2Fproject-pier-investment-memorandum%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Project Pier / Investment Memorandum">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Project Pier / Investment Memorandum">
+<meta name="twitter:description" content="Project Pier / Investment Memorandum | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjbarry0803.github.io%2Fproject-pier-investment-memorandum%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Project Pier / Investment Memorandum">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Pier / Investment Memorandum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0E1922;
+  --ink-soft: #2A3642;
+  --paper: #F5EFE3;
+  --paper-warm: #EDE5D3;
+  --rule: #C9BFA8;
+  --rule-soft: #D9D0BC;
+  --claret: #7C1F2C;
+  --gold: #9A7B3A;
+  --muted: #6B6456;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.55;
+  font-feature-settings: "kern", "liga", "onum";
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(156, 123, 58, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(124, 31, 44, 0.03) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 28px 0 18px;
+  border-bottom: 1px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.doc-header .brand {
+  font-family: 'Fraunces', serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--claret);
+}
+
+.doc-header .classification { color: var(--claret); }
+
+.hero {
+  padding: 56px 0 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero .codename {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--claret);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(44px, 6.5vw, 76px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 20px;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--claret);
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+
+.hero .subtitle {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 620px;
+  line-height: 1.4;
+  margin-bottom: 36px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.meta-grid .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.meta-grid .value {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.section {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 36px;
+}
+
+.section-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--claret);
+  text-transform: uppercase;
+  padding-top: 6px;
+}
+
+.section-number .roman {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1;
+  margin-top: 8px;
+  letter-spacing: 0;
+}
+
+.section-body h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 24px;
+  max-width: 580px;
+}
+
+.section-body h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--claret);
+  margin: 22px 0 8px;
+}
+
+.section-body p {
+  margin-bottom: 14px;
+  color: var(--ink-soft);
+  max-width: 660px;
+}
+
+.section-body p.lede {
+  font-size: 19px;
+  line-height: 1.4;
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 20px;
+  max-width: 680px;
+}
+
+.section-body strong { color: var(--ink); font-weight: 600; }
+.section-body em { font-style: italic; color: var(--ink); }
+
+.thesis-callout {
+  border-left: 2px solid var(--claret);
+  padding: 2px 0 2px 22px;
+  margin: 24px 0;
+  max-width: 640px;
+}
+
+.thesis-callout .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--claret);
+  margin-bottom: 8px;
+}
+
+.thesis-callout p {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0;
+}
+
+.plays-table {
+  margin: 24px 0 16px;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.plays-header, .plays-row {
+  display: grid;
+  grid-template-columns: 40px 1.8fr 1fr 0.7fr 0.9fr 0.9fr;
+  gap: 14px;
+  padding: 12px 0;
+  align-items: baseline;
+}
+
+.plays-header {
+  border-bottom: 1px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.plays-row { border-bottom: 1px solid var(--rule-soft); }
+.plays-row:last-child { border-bottom: none; }
+
+.plays-row .rank {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--claret);
+  line-height: 1;
+}
+
+.plays-row .play-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.plays-row .play-name small {
+  display: block;
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.plays-row .cell {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.plays-row .cell.horizon, .plays-row .cell.risk {
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.illustrative-note {
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.play-detail {
+  margin: 36px 0;
+  padding: 28px 0 0;
+  border-top: 1px solid var(--rule);
+}
+
+.play-detail .play-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--claret);
+  margin-bottom: 6px;
+}
+
+.play-detail .play-label {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.play-detail .play-num {
+  font-family: 'Fraunces', serif;
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--claret);
+  line-height: 0.9;
+}
+
+.play-detail .play-title {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.play-structure {
+  background: rgba(201, 191, 168, 0.18);
+  border: 1px solid var(--rule-soft);
+  padding: 18px 24px;
+  margin: 20px 0;
+  max-width: 680px;
+}
+
+.play-structure .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--claret);
+  margin-bottom: 10px;
+}
+
+.play-structure ol {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+}
+
+.play-structure ol li {
+  counter-increment: step;
+  padding: 5px 0 5px 32px;
+  position: relative;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.play-structure ol li::before {
+  content: counter(step, upper-roman) ".";
+  position: absolute;
+  left: 0;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--claret);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.econ-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 22px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.econ-grid .item .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.econ-grid .item .value {
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.econ-grid .item .value .unit {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.play-takeaway {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 16px;
+  max-width: 700px;
+}
+
+.play-takeaway .col h4 { margin-top: 0; }
+.play-takeaway .col p { font-size: 14px; margin-bottom: 0; }
+
+.risk-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.risk-list li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.risk-list li:last-child { border-bottom: none; }
+
+.risk-list .risk-level {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding-top: 3px;
+}
+
+.risk-list .risk-level.binary { color: var(--claret); font-weight: 600; }
+.risk-list .risk-level.high { color: var(--claret); }
+.risk-list .risk-level.med { color: var(--gold); }
+
+.risk-list .risk-body strong {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.risk-list .risk-body p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+.actions {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.actions li {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px dotted var(--rule);
+  align-items: baseline;
+}
+
+.actions li:last-child { border-bottom: none; }
+
+.actions .num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--claret);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.actions .task {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.45;
+  max-width: 580px;
+}
+
+.actions .task strong { color: var(--ink); font-weight: 600; }
+
+.actions .cost {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1.5px solid var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+footer .mark {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--claret);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .page { padding: 0 20px; }
+  .section { grid-template-columns: 1fr; gap: 12px; }
+  .meta-grid { grid-template-columns: repeat(2, 1fr); }
+  .econ-grid { grid-template-columns: repeat(2, 1fr); }
+  .play-takeaway { grid-template-columns: 1fr; }
+  .plays-header, .plays-row { grid-template-columns: 32px 1.5fr 1fr; font-size: 13px; }
+  .plays-header > div:nth-of-type(4),
+  .plays-header > div:nth-of-type(5),
+  .plays-header > div:nth-of-type(6),
+  .plays-row > div:nth-of-type(4),
+  .plays-row > div:nth-of-type(5),
+  .plays-row > div:nth-of-type(6) { display: none; }
+}
+
+@media print {
+  body { background: white; }
+  .page { padding: 0 20mm; }
+  .section, .play-detail { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div class="brand">Barry Private Office</div>
+    <div class="classification">Private &amp; Confidential</div>
+    <div>Ref / BPO-2026-04</div>
+  </div>
+
+  <section class="hero">
+    <div class="codename">Project Pier</div>
+    <h1>A harbour-view<br>freehold, <em>hidden</em><br>in plain sight.</h1>
+    <div class="subtitle">An opportunity to acquire a cross-lease-encumbered half-freehold on Pier Steps, St Peter Port, at a discount to marriage value, with a structurally narrow buyer universe.</div>
+
+    <div class="meta-grid">
+      <div><div class="label">To</div><div class="value">David J. Barry</div></div>
+      <div><div class="label">From</div><div class="value">Joe Barry</div></div>
+      <div><div class="label">Date</div><div class="value">22 April 2026</div></div>
+      <div><div class="label">Asset</div><div class="value">Pier Steps, GY1 2LF</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-number">Part One<span class="roman">I.</span></div>
+    <div class="section-body">
+      <h2>Executive summary.</h2>
+
+      <p>A granite building on Pier Steps, occupied on its upper floors by the United Club (Guernsey) and at street level by retail tenants, is held under split freehold between the Club and the Dorey family, with reciprocal cross-leases governing shared use. The Club is in openly communicated financial distress. The Dorey side is assumed motivated to sell. The cross-lease architecture collapses the realistic buyer universe to two or three parties, creating a pricing anomaly.</p>
+
+      <div class="thesis-callout">
+        <div class="label">Thesis</div>
+        <p>Cross-leased part-freeholds trade at a discount to marriage value. Whoever unifies the title captures the uplift. We are the rational second party in a market of two.</p>
+      </div>
+
+      <p>As Club members with Guernsey-resident capital and professional networks, we hold an information and relationship advantage no outside buyer can replicate. Recommendation: open with <strong>Option II</strong> (acquire the Dorey share), transition to <strong>Option I</strong> (unify the freehold) from inside the ownership. Hold <strong>Option III</strong> (secured mezzanine) in reserve.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-number">Part Two<span class="roman">II.</span></div>
+    <div class="section-body">
+      <h2>The situation.</h2>
+
+      <h4>The asset</h4>
+      <p>Harbour-facing granite building at Pier Steps, GY1 2LF. Confirmed tenants include the United Club on upper floors, Charman &amp; Co at 1 Pier Steps, and The Roll Bar café at 2 Pier Steps. Prime location: above Victoria Marina, within the St Peter Port Core Retail Area, uninterrupted views over the harbour.</p>
+
+      <h4>The ownership (subject to title search)</h4>
+      <p>Per local knowledge, freehold held in split form between the United Club and a branch of the Dorey family, with cross-leases granting each party operational use of parts of the other's freehold. Guernsey law explicitly permits this: horizontal severance of land in absolute title in perpetuity, clarified in 1987. Leases are classified as movable property and do not create real estate interests, which shapes how cross-lease arrangements price on transfer.</p>
+
+      <h4>The Club</h4>
+      <p>Not-for-profit members' institution founded 1870, on Pier Steps since 1919. Funded by approximately £440 per resident member per year plus periodic levies. Openly communicates financial distress to membership. Post-pandemic decline in private members' clubs is structural. The Club's realistic options are member levies, monetising the freehold, or accepting external capital.</p>
+
+      <h4>The Dorey position (to verify)</h4>
+      <p>Assumed motivated. Common exit drivers for generational Guernsey commercial freeholds: succession, probate, diversification, or retail-lease risk in a softening town-centre market. This assumption is the single most important item on the diligence list.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-number">Part Three<span class="roman">III.</span></div>
+    <div class="section-body">
+      <h2>Why it is mispriced.</h2>
+
+      <p class="lede">Cross-leased part-freeholds are the textbook marriage-value asset. The whole is worth materially more than the sum of its parts, and the buyer universe for either part alone is structurally small.</p>
+
+      <h4>The buyer universe</h4>
+      <p>Anyone may legally bid for the Dorey half. Only a small set will pay a rational price. A third-party buyer inherits a freehold encumbered by leases granting the Club use of parts of that freehold; they must negotiate every shared servitude, stairwell, and utility run with a counterparty whose incentives are misaligned. In a small island where the Club carries social weight, a hostile outside buyer is also politically exposed. Result: outside bids come in at 40 to 60 per cent of pro-rata unified value. The Club is the highest rational bidder. We are the second. There is effectively no third.</p>
+
+      <h4>The marriage value</h4>
+      <p>Unifying the two part-freeholds produces a single clean title: conventionally financeable, redevelopable without counterparty consent, priced institutionally on sale or refinance. Marriage value on comparable split-freehold transactions runs 25 to 45 per cent of the combined unified figure. Working assumption: 30 per cent.</p>
+
+      <h4>The information asymmetry</h4>
+      <p>As members we observe the Club's trajectory in real time. As Guernsey-resident principals, we can approach the Dorey side through known channels rather than as outside capital. No Club-unaffiliated fund can replicate either.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-number">Part Four<span class="roman">IV.</span></div>
+    <div class="section-body">
+      <h2>Three structures, ranked.</h2>
+
+      <div class="plays-table">
+        <div class="plays-header">
+          <div>#</div><div>Structure</div><div>Capital</div><div>Years</div><div>Target MoM</div><div>Exec. Risk</div>
+        </div>
+        <div class="plays-row">
+          <div class="rank">I</div>
+          <div class="play-name">Unified freehold via HoldCo<small>Buy both sides; rescue the Club with a peppercorn lease.</small></div>
+          <div class="cell">£3.5 – 5.5m</div>
+          <div class="cell horizon">5 – 10</div>
+          <div class="cell">2.0 – 3.0x</div>
+          <div class="cell risk">High</div>
+        </div>
+        <div class="plays-row">
+          <div class="rank">II</div>
+          <div class="play-name">Bilateral acquisition of Dorey share<small>Sit in the Dorey seat, collect rent, wait.</small></div>
+          <div class="cell">£1.5 – 2.5m</div>
+          <div class="cell horizon">3 – 7</div>
+          <div class="cell">1.6 – 2.2x</div>
+          <div class="cell risk">Medium</div>
+        </div>
+        <div class="plays-row">
+          <div class="rank">III</div>
+          <div class="play-name">Secured mezz to Club, equity kicker<small>Lend into the solution, convert on default.</small></div>
+          <div class="cell">£1.0 – 2.0m</div>
+          <div class="cell horizon">2 – 5</div>
+          <div class="cell">1.4 – 2.5x</div>
+          <div class="cell risk">Low</div>
+        </div>
+      </div>
+
+      <p class="illustrative-note">Illustrative pending title search, professional valuation, and verification of Dorey motivation. Capital ranges assume a unified freehold valuation of £5 to 8m at marriage value.</p>
+
+      <div class="play-detail">
+        <div class="play-tag">Option One &middot; Maximum Value Capture</div>
+        <div class="play-label">
+          <div class="play-num">I</div>
+          <div class="play-title">Unified Freehold via HoldCo.</div>
+        </div>
+
+        <p>Form a Guernsey limited company with the principals as equity. HoldCo acquires the Dorey share, then negotiates with the Club Committee: HoldCo buys the Club's freehold share in exchange for (a) a peppercorn occupational lease of sufficient length and security to pass a member vote, and (b) cash consideration to clear Club debts and fund a refurb of occupied space. HoldCo ends with a unified freehold, a peppercorn-rental tenant now politically indebted, and the ground-floor retail. Refinanceable institutionally. Commands marriage-value pricing on exit.</p>
+
+        <div class="play-structure">
+          <div class="label">Structure</div>
+          <ol>
+            <li>Incorporate Guernsey HoldCo; principals as equity holders.</li>
+            <li>Acquire Dorey freehold share via conveyance at the Greffe.</li>
+            <li>Negotiate with Club: HoldCo buys Club share for peppercorn lease + cash.</li>
+            <li>Member EGM approves (typically requires supermajority).</li>
+            <li>Unified title registered; refinance via Guernsey-active bank.</li>
+            <li>Hold or sell at year 5 to 10.</li>
+          </ol>
+        </div>
+
+        <div class="econ-grid">
+          <div class="item"><div class="label">Capital at risk</div><div class="value">£3.5 – 5.5<span class="unit"> m</span></div></div>
+          <div class="item"><div class="label">Exit value (base)</div><div class="value">£8 – 12<span class="unit"> m</span></div></div>
+          <div class="item"><div class="label">Target MoM</div><div class="value">2.0 – 3.0<span class="unit"> x</span></div></div>
+          <div class="item"><div class="label">Horizon</div><div class="value">5 – 10<span class="unit"> yrs</span></div></div>
+        </div>
+
+        <div class="play-takeaway">
+          <div class="col">
+            <h4>Why it wins</h4>
+            <p>The peppercorn lease trade is the hinge: almost no economic cost to HoldCo, enormous value to the Club. Classic non-linear trade.</p>
+          </div>
+          <div class="col">
+            <h4>Why it might fail</h4>
+            <p>Member vote. Supermajority requirement means a vocal minority can block. Mitigate with private engagement of Treasurer and senior members before any formal proposal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="play-detail">
+        <div class="play-tag">Option Two &middot; Recommended Entry</div>
+        <div class="play-label">
+          <div class="play-num">II</div>
+          <div class="play-title">Bilateral acquisition of the Dorey share.</div>
+        </div>
+
+        <p>The cleaner opening move. Acquire the Dorey freehold share directly, personally or via a single-purpose vehicle. No Club involvement required. We step into the seat the Dorey family has held for generations: co-freeholder, cross-lease counterparty, landlord to the retail tenant. Collect retail rent as running yield; hold the cross-lease options; wait. When the Club raises capital, sell to them at marriage value. Alternatively, with bilateral trust established, propose the Option I transaction from a position of already owning one half.</p>
+
+        <div class="play-structure">
+          <div class="label">Structure</div>
+          <ol>
+            <li>Confirm Dorey identity, ownership, and willingness to transact.</li>
+            <li>Engage Guernsey advocate; title search at the Greffe and Cadastre.</li>
+            <li>Obtain independent valuation (Savills Guernsey).</li>
+            <li>Offer at 60 to 70 per cent of pro-rata unified value, citing encumbrance.</li>
+            <li>Close via Contracts Court (Tuesday or Thursday morning, Royal Court).</li>
+            <li>Hold, collect rent, transition to Option I when conditions favour.</li>
+          </ol>
+        </div>
+
+        <div class="econ-grid">
+          <div class="item"><div class="label">Capital at risk</div><div class="value">£1.5 – 2.5<span class="unit"> m</span></div></div>
+          <div class="item"><div class="label">Running yield</div><div class="value">4 – 6<span class="unit"> %</span></div></div>
+          <div class="item"><div class="label">Target MoM</div><div class="value">1.6 – 2.2<span class="unit"> x</span></div></div>
+          <div class="item"><div class="label">Horizon</div><div class="value">3 – 7<span class="unit"> yrs</span></div></div>
+        </div>
+
+        <div class="play-takeaway">
+          <div class="col">
+            <h4>Why it wins</h4>
+            <p>Unilateral action. Buy discounted, earn yield, hold marriage-value optionality as a free option. Structural cousin to buying distressed sovereign bonds that eventually redeem at par. Familiar terrain.</p>
+          </div>
+          <div class="col">
+            <h4>Why it might fail</h4>
+            <p>Indefinite illiquidity. If the Club never raises capital to buy us out, exit is only onward bilateral sale at similar discount. Retail yield underwrites the wait but does not produce the return.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="play-detail">
+        <div class="play-tag">Option Three &middot; Defensive Structure</div>
+        <div class="play-label">
+          <div class="play-num">III</div>
+          <div class="play-title">Secured mezzanine with equity kicker.</div>
+        </div>
+
+        <p>Lend the Club the capital to acquire the Dorey share themselves. Structure as a Guernsey bond secured by first-ranking charge over the unified freehold. Coupon 8 to 10 per cent. Warrants entitling the lender to a share of any future monetisation. Conversion right into a freehold share on default. Base case: clip a coupon on a well-collateralised loan. Downside case: Club defaults, we convert, we own part of the building at an administrative discount. Default is an alternative return path, not a failure mode.</p>
+
+        <div class="play-structure">
+          <div class="label">Structure</div>
+          <ol>
+            <li>Approach Club Treasurer with a term sheet when they next raise capital.</li>
+            <li>Structure as Guernsey-law bond, first-ranking charge on unified freehold.</li>
+            <li>Include warrants (10 to 20% of future monetisation) and conversion right.</li>
+            <li>Register at the Greffe post-Contracts Court.</li>
+            <li>Collect coupon; convert or exit on sale.</li>
+          </ol>
+        </div>
+
+        <div class="econ-grid">
+          <div class="item"><div class="label">Capital at risk</div><div class="value">£1.0 – 2.0<span class="unit"> m</span></div></div>
+          <div class="item"><div class="label">Base coupon</div><div class="value">8 – 10<span class="unit"> %</span></div></div>
+          <div class="item"><div class="label">Target MoM</div><div class="value">1.4 – 2.5<span class="unit"> x</span></div></div>
+          <div class="item"><div class="label">Horizon</div><div class="value">2 – 5<span class="unit"> yrs</span></div></div>
+        </div>
+
+        <div class="play-takeaway">
+          <div class="col">
+            <h4>Why it sits third</h4>
+            <p>Marriage value accrues primarily to the Club. Only a fractional share flows to the lender via the warrant. Lower absolute upside than I or II.</p>
+          </div>
+          <div class="col">
+            <h4>When it wins</h4>
+            <p>Best as a defensive or complementary position, deployed if the Club approaches us for capital before we are ready to move directly on the Dorey side.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-number">Part Five<span class="roman">V.</span></div>
+    <div class="section-body">
+      <h2>Risks.</h2>
+
+      <ul class="risk-list">
+        <li>
+          <div class="risk-level binary">Binary</div>
+          <div class="risk-body">
+            <strong>The Dorey side will not sell.</strong>
+            <p>If the seller is not motivated, no structure rescues the deal. Every figure presumes motivation. Confirm before capital is committed, via discreet approach through advocate or estate agent at arm's length.</p>
+          </div>
+        </li>
+        <li>
+          <div class="risk-level high">High</div>
+          <div class="risk-body">
+            <strong>Ownership not as assumed.</strong>
+            <p>Cross-lease architecture and Dorey identification are local knowledge, not verified. Greffe title search either corroborates or overturns the premise. Cost: £3 to 6k.</p>
+          </div>
+        </li>
+        <li>
+          <div class="risk-level high">High</div>
+          <div class="risk-body">
+            <strong>Club constitution blocks disposal.</strong>
+            <p>Most members' clubs require supermajority; some require unanimous. Review before proposing Option I. Option II does not require Club consent.</p>
+          </div>
+        </li>
+        <li>
+          <div class="risk-level med">Medium</div>
+          <div class="risk-body">
+            <strong>Island political exposure.</strong>
+            <p>If perceived by membership as extracting value from a distressed institution we are members of, social cost is non-trivial. Structure Option I so the Club is materially better off post-transaction, and make that framing explicit.</p>
+          </div>
+        </li>
+        <li>
+          <div class="risk-level med">Medium</div>
+          <div class="risk-body">
+            <strong>Retail tenant risk.</strong>
+            <p>If the existing tenant does not renew, Option II running yield collapses until replaced. Town-centre vacancy in St Peter Port is soft. Diligence current lease term and tenant covenant.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="border-bottom: none;">
+    <div class="section-number">Part Six<span class="roman">VI.</span></div>
+    <div class="section-body">
+      <h2>This week.</h2>
+
+      <p class="lede">Three actions, in order. Nothing expensive, nothing irreversible.</p>
+
+      <ol class="actions">
+        <li>
+          <div class="num">i</div>
+          <div class="task">Call The Roll Bar on <strong>01481 722009</strong>. Ask who their landlord is. Commercial tenants name their landlord without hesitation. Confirms or refutes the Dorey identification in one phone call.</div>
+          <div class="cost">Free</div>
+        </li>
+        <li>
+          <div class="num">ii</div>
+          <div class="task">Obtain the <strong>Club constitution</strong> from the Club Secretary. We are members, we are entitled. Identify disposal provisions and supermajority thresholds.</div>
+          <div class="cost">Free</div>
+        </li>
+        <li>
+          <div class="num">iii</div>
+          <div class="task">Instruct <strong>Carey Olsen</strong> (or Ogier / Collas Crill) for a title search at the Greffe. Decisive diligence spend. Everything depends on what it returns.</div>
+          <div class="cost">£3 – 6k</div>
+        </li>
+      </ol>
+
+      <p style="margin-top: 20px; font-size: 14px; color: var(--ink-soft); max-width: 640px;">Total diligence budget to reach Option II term sheet readiness: approximately £15 to 25k over two to three months. Capital commitment beyond diligence is optional at every stage.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div>Barry Private Office <span class="mark">&middot;</span> Project Pier <span class="mark">&middot;</span> Private &amp; Confidential</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
